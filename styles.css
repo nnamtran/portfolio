@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    transition: 0.3s;
+    margin: 0;
+    padding: 0%;
+    background-color: rgb(27, 183, 255);
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px;
+}
+
+p {
+    margin: 0px;
+    font-size: 20px;
+}
+
+a {
+    color: rgb(211, 106, 20);
+}
+
+.dark a {
+    color: rgb(236, 215, 119);
+}
+
+h1 {
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+.square h2 {
+    margin: 50px 0 10px 0;
+}
+
+.switch {
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;;
+    background-color: rgb(68, 66, 66);
+    position: relative;
+}
+
+.flicker {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transition: 0.3s;
+    box-shadow: inset 4px 4px 4px rgb(255, 255, 255), inset -4px -4px 4px rgb(151 148 148 / 90%);
+}
+
+.dark {
+    background-color: rgb(51, 49, 49);
+    transition: 0.3s;
+}
+
+.moon {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
+    position: absolute;
+    top: 5px;
+    left: 45px;
+}
+
+.dark .flicker {
+    transform: translateX(40px);   
+}
+
+.dark > *{
+    color: rgb(255, 255, 255);
+}
+
+.main {
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-text {
+    width: 50%;
+    padding: 30px;
+}
+
+.square {
+    width: 98%;
+    margin: 1%;
+    height: 350px;
+    background-color: rgb(184, 227, 255);
+    text-align: center;
+}
+
+.dark .square {
+    background-color: rgb(168, 158, 15);
+}
+
+.sub-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 100px 30px;
+    background-color: rgb(30, 59, 224);
+    color:rgb(255, 255, 255);
+}
+
+.dark footer {
+    background-color: rgb(29, 29, 29);
+    color: rgb(241, 218, 176);
+}
+
+.hero-image {
+    position: relative;
+    width: 50%;
+    height: 350px;
+}
+
+.sun {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #ffde00;
+    box-shadow: 
+        0 0 0 20px #ffde0080, 
+        0 0 0 40px #ffde0040, 
+        0 0 0 60px #ffde0020, 
+        0 0 0 80px #ffde0010,  
+        0 0 0 100px #ffde0000,  
+        0 0 40px 100px #ffde0010;
+    animation: sunrise 2s infinite linear forwards, rays 2s 2s infinite linear;
+}
+
+@keyframes sunrise {
+    0% {
+        box-shadow: none;
+    }
+}
+
+@keyframes rays {
+    0% {
+        box-shadow: 
+        0 0 0 0px #ffde0080, 
+        0 0 0 20px #ffde0080, 
+        0 0 0 40px #ffde0040, 
+        0 0 0 60px #ffde0020,  
+        0 0 0 80px #ffde0010,  
+        0 0 40px 100px #ffde0010;
+    }
+    100% {
+        box-shadow: 
+        0 0 0 20px #ffde0080, 
+        0 0 0 40px #ffde0040, 
+        0 0 0 60px #ffde0020, 
+        0 0 0 80px #ffde0010,  
+        0 0 0 100px #ffde0000,  
+        0 0 40px 100px #ffde0010;
+    }
+}
+
+.dark .sun {
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    box-shadow: -20px 0 0 15px yellow;
+    border-radius: 50%;
+    
+}
+
+@media only screen and (min-width: 970px) {
+    .square {
+        width: 48%;
+        margin: 1%;
+        height: 600px;
+    }
+}
